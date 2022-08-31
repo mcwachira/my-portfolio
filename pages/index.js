@@ -7,7 +7,7 @@ import { Blog } from 'styled-icons/icomoon'
 
 const TopContainer = styled.div`
 display: flex;
-height: 100vh;
+height: 70vh;
 flex-direction: column;
 align-items: center;
 justify-content: center;
@@ -41,10 +41,6 @@ font-size: 1.25rem;
 line-height: 1.75rem;
 margin-top: 1rem;
 
-
-
-
-
 `
 const BlueBlog = styled(Blog)`
 color:#0070f3
@@ -62,6 +58,19 @@ color:#0070f3
 
 const BlueInstagram = styled(Instagram)`
 color:#0070f3
+`
+const BodyContainer = styled.div`
+/* margin-top: -10rem; */
+`
+const PostHeading = styled.h1`
+color:#0070f3;
+font-size:3rem;
+font-weight:bold;
+border-bottom:4px solid #330;
+
+
+
+
 `
 export default function Home() {
   return (
@@ -110,6 +119,14 @@ export default function Home() {
         </SocialLinks>
       </TopContainer>
      
+
+      <PostHeading>
+        Latest Posts
+      </PostHeading>
+      <BodyContainer>
+      
+    
+      </BodyContainer>
     </div>
   )
 }

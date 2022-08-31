@@ -5,7 +5,7 @@ import {
   NavbarContainer, NavbarLogo, NavbarMenu,NavbarLinks, NavbarLink, ThemeToggler, SunIcon, MoonIcon, NavbarMenuButton, NavbarMenuLine, NavbarMenuLineOne ,
 NavbarMenuLineTwo ,
 NavbarMenuLineThree,
-} from './Navbar'
+} from './Navbar.styles'
 import { Sun, MoonStarsFill } from 'styled-icons/bootstrap'
 const Navbar = () => {
 
@@ -35,6 +35,7 @@ const toggleMenu =() => {
             <NavbarLink href='/projects'>Projects</NavbarLink>
             <NavbarLink href='/blog'>Blog</NavbarLink>
             <NavbarLink href='/Snippets'>Snippets</NavbarLink>
+            <NavbarLink href='/newsletter'>NewsLetter</NavbarLink>
             <NavbarLink href='/contact'>Contact </NavbarLink>
 </NavbarLinks>
         

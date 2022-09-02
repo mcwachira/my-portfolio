@@ -40,16 +40,24 @@ const Footer = () => {
                   </FooterLinks>
   </div>
            
-        <FooterContacts>
 
-<h2>
+           <div>
+                  <h2>
                       Contacts
                   </h2>
+                  <FooterContacts>
 
-                <h3>
-                    Twitter
-                </h3>
-              </FooterContacts>
+
+
+                      <h3>
+                          Twitter
+                      </h3>
+                      <h3>
+                          LinkedIn
+                      </h3>
+                  </FooterContacts>
+           </div>
+      
   </FooterLinksColumn>
    </FooterContainer>
   )

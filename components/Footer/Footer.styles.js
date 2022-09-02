@@ -4,13 +4,16 @@ import Link from '../Link'
 
 
 export const FooterContainer = styled.div`
+padding-top: 2rem;
 width:100%;
 display:flex;
 flex-direction: column;
-background:#0070f3;
+background:#F0F3F7;
+color:#0070f3;
 @media ${device.tablet}{
 flex-direction: row;
 justify-content: space-between;
+
 }
 
 `
@@ -72,7 +75,7 @@ flex-direction: column;
 
 `
 export const FooterLink = styled(Link)`
-font-size: 1.3rem;
+font-size: 1.1rem;
 padding:.5rem 0;
 
 @media ${device.tablet}{
@@ -86,6 +89,8 @@ display:flex;
 flex-direction: column;
 
 @media ${device.tablet}{
-/* justify-content: space-between; */
+    flex-direction: row;
+justify-content: space-between;
+
 }
 `

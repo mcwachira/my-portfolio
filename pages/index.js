@@ -4,7 +4,9 @@ import styles from '../styles/Home.module.css'
 import styled from 'styled-components'
 import { Twitter, LinkedinSquare ,Github, Instagram} from 'styled-icons/boxicons-logos'
 import { Blog } from 'styled-icons/icomoon'
-
+import { getAllPosts } from '@/lib/posts'
+import {Post} from '@/components/index'
+import {device} from '@/utils/devices'
 const TopContainer = styled.div`
 display: flex;
 height: 70vh;
@@ -60,7 +62,18 @@ const BlueInstagram = styled(Instagram)`
 color:#0070f3
 `
 const BodyContainer = styled.div`
-/* margin-top: -10rem; */
+width: 100%;
+margin:auto;
+display:grid;
+gap:4rem;
+margin:3rem auto;
+
+@media ${device.tablet}{
+grid-template-columns: repeat(2, 1fr);
+};
+@media ${device.laptop}{
+grid-template-columns: repeat(3, 1fr);
+}
 `
 const PostHeading = styled.h1`
 color:#0070f3;
@@ -72,7 +85,9 @@ border-bottom:4px solid #330;
 
 
 `
-export default function Home() {
+export default function Home({posts}) {
+
+
   return (
     <div className={styles.container}>
    
@@ -124,9 +139,26 @@ export default function Home() {
         Latest Posts
       </PostHeading>
       <BodyContainer>
-      
-    
+        {posts.map((post, index) => (
+          <Post key={index} post={post} />
+        ))}
+
       </BodyContainer>
     </div>
   )
+}
+
+
+
+//always return an object with getStaticProps
+export const getStaticProps = async () => {
+
+  const posts = getAllPosts().slice(0, 6)
+
+
+  return {
+    props: {
+       posts
+    }
+  }
 }

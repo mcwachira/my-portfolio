@@ -1,5 +1,10 @@
 .container {
   padding: 0 2rem;
+  background-image: url('/images/bg-light.svg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 .main {

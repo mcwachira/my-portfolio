@@ -67,6 +67,7 @@ margin:auto;
 display:grid;
 gap:4rem;
 margin:3rem auto;
+/* background: #EAEEF4; */
 
 @media ${device.tablet}{
 grid-template-columns: repeat(2, 1fr);

@@ -6,35 +6,57 @@ import Layout from '@/components/Layout'
 import Image from 'next/image'
 import { getSinglePost, getAllPosts} from '../../lib/posts'
 import { getMDXComponent } from "mdx-bundler/client";
+import {device} from '@/utils/devices'
+import SyntaxHighlighter from '@/utils/SyntaxHighlighter'
 
 
 
 const BackButton = styled(Link)`
 background-color: #0070f3;
-padding:1rem 2rem ;
+padding:.5rem 1rem ;
+color:#0AC2C2;
+`
+
+const PostPageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    /* background: rgb(255, 255, 254); */
+    transition: background 350ms;
+    margin:8rem auto;
 
 `
 
 const PostContainer = styled.div`
-width:100%;
-margin-top:5rem;
-background-color: #fff;
+  width:100%;
+    position: relative;
+    margin:auto;
+    flex: 1 1 0%;
+    max-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 0px 32px;
+@media ${device.tablet}{
+width:50%;
+};
+
+/* background-color: #fff; */
 
 `
 const PostTitle = styled.h1`
 font-size: 3rem;
 color:#000;
 text-align: center;
-margin-top: 3rem;
+margin: 5rem auto;
 
 `
 const PostTextContainer = styled.div`
-margin-top:2rem;
+
 
 `
 
 const PostPage = ({frontmatter, code, slug}) => {
 
+  console.log(frontmatter.language)
 
   
     const Component =useMemo(() => {
@@ -46,26 +68,33 @@ const PostPage = ({frontmatter, code, slug}) => {
     },[code])
 
   return (
- <>
-<BackButton href='/blog'> Go Back</BackButton>
+    <PostPageContainer>
+
 
 <PostContainer>
-              {/* <PostTitle>
+     
+              <PostTitle>
           {frontmatter?.title} 
+          
               </PostTitle>
-              <Image src={frontmatter.cover_image} alt={frontmatter.title} width={200} height={300}/> */}
-
+              {/* <Image src={frontmatter.cover_image} alt={frontmatter.title} width={200} height={300}/> */}
+        <BackButton href='/blog'> Go Back</BackButton>
               <PostTextContainer>
 
-          <Component /> 
+              {frontmatter.readingTime.minutes}
+              {/* {frontmatter.wordCount}
+              {frontmatter.slug} */}
+
+          <Component  language={frontmatter.language} components={{
+            pre:SyntaxHighlighter
+          }}/> 
                
               </PostTextContainer>
 
 </PostContainer>
 
 
-
-pages/posts/[slug].js </>
+ </PostPageContainer>
   )
 }
 
@@ -74,7 +103,7 @@ export default PostPage
 
 export const getStaticProps = async ({ params }) => {
   const post = await getSinglePost(params.slug)
-  console.log(post)
+  // console.log(post)
   return {
     props: { ...post },
   };

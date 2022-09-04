@@ -22,7 +22,7 @@ const Footer = () => {
 
   <div>
                   <h2>
-                      Links
+                      Site
                   </h2>
                   <FooterLinks>
                      

@@ -8,18 +8,19 @@ import { getSinglePost, getAllPosts} from '../../lib/posts'
 import { getMDXComponent } from "mdx-bundler/client";
 import {device} from '@/utils/devices'
 import SyntaxHighlighter from '@/utils/SyntaxHighlighter'
-
+import { ArrowLeft } from 'styled-icons/bootstrap'
 
 
 const BackButton = styled(Link)`
 background-color: #0070f3;
-padding:.5rem 1rem ;
+/* padding:.5rem 1rem ; */
 color:#0AC2C2;
 `
 
 const PostPageContainer = styled.div`
     display: flex;
     flex-direction: column;
+    background-color: #FFFFFE;
     /* background: rgb(255, 255, 254); */
     transition: background 350ms;
     margin:8rem auto;
@@ -35,6 +36,9 @@ const PostContainer = styled.div`
     min-height: 100vh;
     overflow: hidden;
     padding: 0px 32px;
+    /* letter-spacing:1px;
+    line-height: 1rem; */
+  
 @media ${device.tablet}{
 width:50%;
 };
@@ -44,9 +48,10 @@ width:50%;
 `
 const PostTitle = styled.h1`
 font-size: 3rem;
+line-height: 3.2rem;
 color:#000;
 text-align: center;
-margin: 5rem auto;
+margin: 3rem auto;
 
 `
 const PostTextContainer = styled.div`
@@ -64,7 +69,7 @@ const PostPage = ({frontmatter, code, slug}) => {
       if(code){
         return getMDXComponent(code)
       }
-      return <div/>
+      return (<div></div>)
     },[code])
 
   return (
@@ -81,7 +86,7 @@ const PostPage = ({frontmatter, code, slug}) => {
         <BackButton href='/blog'> Go Back</BackButton>
               <PostTextContainer>
 
-              {frontmatter.readingTime.minutes}
+              {frontmatter.readingTime.text}
               {/* {frontmatter.wordCount}
               {frontmatter.slug} */}
 

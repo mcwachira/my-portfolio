@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { device } from '../../utils/devices'
-import Link from '../Link'
+import MyLink from '../Link'
 import { ArrowRight } from '@styled-icons/bootstrap/ArrowRight'
 
 
-export const PostCard = styled(Link)`
+export const PostCard = styled(MyLink)`
 padding: 1.5rem;
 width:100%;
 background:#FFEFFD;
@@ -72,7 +72,7 @@ font-size: 1.2rem;
 color:#000;
 
 `
-export const PostLink = styled(Link)`
+export const PostLink = styled(MyLink)`
 display:flex;
 color: transparent;
 align-items: center;

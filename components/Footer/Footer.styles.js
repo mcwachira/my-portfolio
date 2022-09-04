@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import { device } from '../../utils/devices'
-import Link from '../Link'
-
+import MyLink from '../Link'
 
 export const FooterContainer = styled.div`
+font-size:13px;
+line-height:23px;
+color:#0a0c10;
 padding-top: 2rem;
 width:100%;
 display:flex;
@@ -74,7 +76,7 @@ flex-direction: column;
 }
 
 `
-export const FooterLink = styled(Link)`
+export const FooterLink = styled(MyLink)`
 font-size: 1.1rem;
 padding:.5rem 0;
 
@@ -87,6 +89,7 @@ margin:0 1rem
 export const FooterContacts = styled.div`
 display:flex;
 flex-direction: column;
+gap:1rem;
 
 @media ${device.tablet}{
     flex-direction: row;

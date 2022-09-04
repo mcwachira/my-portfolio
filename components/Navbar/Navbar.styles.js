@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { Sun, MoonStarsFill } from 'styled-icons/bootstrap'
 import { device } from '../../utils/devices'
-import Link  from '../Link'
+import MyLink from '../Link'
+
 
 export const NavbarMobileMenu = styled.div`
-background-color: navy;
+background: #FFFFFF;
 position: fixed; 
 right:0;
 z-index: 60; 
@@ -66,8 +67,8 @@ top :-1rem ;
 display: flex; 
 width: 100%; 
 margin:0 auto;
-background: navy;
-color:#fff;
+background: #FFFFFF;
+color:#0070f3;
 
 
 `
@@ -77,15 +78,23 @@ padding-top: 1.25rem;
 padding-bottom: 1.25rem; 
 margin-left: 1.25rem;
 margin-right: 1.25rem; 
+
 justify-content: space-between; 
 align-items: center;
 width: 100%; 
 
+@media ${device.tablet}{
+margin:auto;
+}
+
 
 `
 export const NavbarLogo = styled.div`
-/* margin:auto; */
+
 font-size: 1.5rem;
+@media ${device.tablet}{
+margin:auto;
+}
 color:#0070f3;
 
 `
@@ -93,9 +102,10 @@ color:#0070f3;
 export const NavbarMenu = styled.div`
 display:none;
 @media ${device.tablet}{
+    margin: auto;
   display: flex;
   flex-direction: row;
-margin-left: 2.5rem; 
+/* margin-left: 2.5rem;  */
 font-size: 0.875rem;
 line-height: 1.25rem; 
 align-items: center; 
@@ -112,14 +122,15 @@ flex-direction: column;
 @media ${device.tablet}{
     
 flex-direction: row;
+margin:auto;
 
 
 }
 `
 
 
-export  const NavbarLink  = styled(Link)`
-font-size: 1.3rem;
+export  const NavbarLink  = styled(MyLink)`
+font-size: 1rem;
 margin:1rem 0;
 /* display: flex;  */
 align-items: center; 
@@ -135,15 +146,14 @@ margin:0 1rem
 `
 
 export const ThemeToggler = styled.button`
-/* margin:auto; */
-/* margin-left:5rem; */
-
 font-size:1.5rem;
 outline: none;
 border: none;
+background: none;
 margin-top: 5rem;
 @media ${device.tablet}{
-
+    margin-left: 5rem;
+/* margin: auto; */
 margin-top: 0;
 
 

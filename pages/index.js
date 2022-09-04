@@ -9,7 +9,7 @@ import {Post} from '@/components/index'
 import {device} from '@/utils/devices'
 const TopContainer = styled.div`
 display: flex;
-height: 70vh;
+height: 60vh;
 flex-direction: column;
 align-items: center;
 justify-content: center;
@@ -17,10 +17,23 @@ margin-right: auto;
 margin-left: auto;
 text-align: center;
 
+@media ${device.tablet}{
+height: 70vh;
+}
+
 `
 const Title = styled.h1`
+font-size:2rem;
+color:#000;
+
+@media ${device.tablet}{
+font-size:2.5rem;
+color:#000;
+}
+@media ${device.laptop}{
 font-size:3rem;
 color:#000;
+}
 
 `
 const TitleSpan = styled.span`
@@ -30,7 +43,15 @@ color:#0070f3
 
 const Motto = styled.p`
 font-weight: 300;
-font-size:1.5rem;
+font-size:1.2rem;
+@media ${device.tablet}{
+font-size:1.6rem;
+
+}
+@media ${device.laptop}{
+font-size:1.8rem;
+
+}
 
 `
 const SocialLinks = styled.ul`
@@ -78,11 +99,16 @@ grid-template-columns: repeat(3, 1fr);
 `
 const PostHeading = styled.h1`
 color:#0070f3;
-font-size:3rem;
+font-size:2.5rem;
 font-weight:bold;
+padding-bottom:1rem;
 border-bottom:4px solid #330;
 
 
+@media ${device.tablet}{
+font-size:3rem;
+color:#000;
+}
 
 
 `
@@ -107,11 +133,7 @@ export default function Home({posts}) {
         </Title>
 
         <SocialLinks>
-          <li>
-            <a href="">
-              <BlueBlog size='30' />
-            </a>
-          </li>
+         
         <li>
        <a href="">
               <BlueTwitter size='30' />

@@ -2,12 +2,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-     /* background-color: #EAEEF4; */
-    /* -webkit-mask-image: url('/images/bg-light.svg');
-    mask-image: url('/images/bg-light.svg'); */
- 
+  font-family:Metropolis, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ font-weight: 300;
+ font-size: 16px;
+ font-size: 18px ;
+ line-height:32px ;
+ color: #0a0c10
     
 }
 

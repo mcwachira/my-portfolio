@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-
+import React, { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
 import {
   NavbarMobileMenu, MobileMenuContainer , MobileMenu, NavbarMenuContainer, NavContainer, NavbarLogo, NavbarMenu, NavbarLinks, NavbarLink, ThemeToggler, SunIcon, MoonIcon, MenuButton
 } from './Navbar.styles'
 import { Sun, MoonStarsFill } from 'styled-icons/bootstrap'
 const Navbar = () => {
 
-  const [theme, setTheme] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
   const [menu, ShowMenu]= useState(false)
 
 const toggleMenu =() => {
@@ -16,9 +16,14 @@ const toggleMenu =() => {
 
 }
 
-  const changeTheme = () => {
- setTheme(!theme)
-  }
+//prevents hydration 
+useEffect(() => {
+  setMounted(true)
+},[])
+if(!mounted){
+  return null
+}
+
    
   return (
   <header>
@@ -64,11 +69,14 @@ const toggleMenu =() => {
               <NavbarLink href='/contact'>Contact </NavbarLink>
             </NavbarLinks>
 
-            <ThemeToggler onClick={() => changeTheme()}>
-              {theme === true ? <MoonIcon size={30} /> : <SunIcon size={30} />}
+            {mounted && (<ThemeToggler >
+              {theme !== 'dark' ? <MoonIcon size={30} onClick={() => setTheme('dark')} /> : <SunIcon size={30} onClick={() => setTheme('light')} />}
 
 
-            </ThemeToggler>
+            </ThemeToggler>)
+            }
+
+
 
           </MobileMenu>
         </MobileMenuContainer>
@@ -95,12 +103,12 @@ const toggleMenu =() => {
               <NavbarLink href='/contact'>Contact </NavbarLink>
             </NavbarLinks>
 
-            <ThemeToggler onClick={() => changeTheme()}>
-              {theme === true ? <MoonIcon size={30} /> : <SunIcon size={30} />}
+         { mounted &&  (<ThemeToggler >
+              {theme !== 'dark' ? <MoonIcon size={30} onClick={() => setTheme('dark')} /> : <SunIcon size={30} onClick={() => setTheme('light')} />}
 
 
-            </ThemeToggler>
-
+            </ThemeToggler>)
+}
           </NavbarMenu>
           <MenuButton
             aria-label="Open menu button"

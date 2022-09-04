@@ -8,7 +8,7 @@ import { Watch } from 'styled-icons/material-outlined'
 import { Eye } from 'styled-icons/bootstrap'
 
 const Post = ({post}) => {
-   console.log(post)
+
   return (
       <PostCard href={`/blog/${post.slug}`}>
     {/* <Image src={post.frontmatter.cover_image} alt={post.frontmatter.title}

@@ -5,7 +5,7 @@ import { ArrowRight } from '@styled-icons/bootstrap/ArrowRight'
 
 
 export const PostCard = styled(MyLink)`
-padding: 1.5rem;
+padding:.9rem;
 width:100%;
 background:#FFEFFD;
 border: 1px solid #eaeaea;
@@ -13,7 +13,6 @@ border-radius: 10px;
 display: flex;
 flex-direction: column;
 gap: 0.55rem;
-padding: 1.5rem;
 transition:all .3s ease-in-out;
 
 &:hover,
@@ -21,6 +20,10 @@ transition:all .3s ease-in-out;
     border-bottom: 5px solid  #0AC2C2;
     transform: translateY(-1rem);
     color: #0AC2C2;
+}
+
+@media ${device.tablet}{
+padding: 1.5rem;
 }
 `
 
@@ -31,6 +34,8 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 font-size:.9rem;
+flex-wrap:wrap;
+
 /* gap:.5rem; */
 @media ${device.tablet}{
     justify-content: space-around;
@@ -42,42 +47,53 @@ flex-direction: row;
 
 `
 export const PostCardTopChild = styled.div`
+
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-gap:.5rem;
+gap:.3rem;
 
 
 @media ${device.tablet}{
     justify-content: space-around;
 align-items: center;
 flex-direction: row;
+gap:.5rem;
 }
 `
 
 export const PostBody = styled.div`
-margin:1rem;
-
+/* margin:1rem; */
 
 
 `
 
 export const PostHeading = styled.h2`
-font-size: 1.5rem;
+font-size: 1.2rem;
 color:#0070f3;
+
+@media ${device.tablet}{
+font-size: 1.5rem;
+
+
+}
+
 
 `
 export const PostExcerpt = styled.p`
-font-size: 1.2rem;
+font-size: 1rem;
 color:#000;
+@media ${device.tablet}{
+font-size: 1.2rem;
+
+}
+
 
 `
 export const PostLink = styled(MyLink)`
 display:flex;
-color: transparent;
-align-items: center;
+text-align: center;
 
-margin-top: 1rem;
 font-size: 1rem;
 transition: color 0.15s ease;
 

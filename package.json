@@ -25,6 +25,7 @@
     "rehype-slug": "^5.0.1",
     "remark": "^14.0.2",
     "remark-gfm": "^3.0.1",
+    "remark-mdx-images": "^2.0.0",
     "remark-toc": "^8.0.1",
     "styled-components": "^5.3.5",
     "styled-icons": "^10.45.0"

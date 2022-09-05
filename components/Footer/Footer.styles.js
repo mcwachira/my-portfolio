@@ -5,12 +5,13 @@ import MyLink from '../Link'
 export const FooterContainer = styled.div`
 font-size:13px;
 line-height:23px;
-color:#0a0c10;
 padding-top: 2rem;
 width:100%;
 display:flex;
 flex-direction: column;
-background:#F0F3F7;
+background:#BFFFF0;
+box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); 
+border-top:1px solid  #999;
 color:#0070f3;
 @media ${device.tablet}{
 flex-direction: row;

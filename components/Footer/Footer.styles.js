@@ -4,15 +4,16 @@ import MyLink from '../Link'
 
 export const FooterContainer = styled.div`
 font-size:13px;
-line-height:23px;
-padding-top: 2rem;
-width:100%;
-display:flex;
-flex-direction: column;
+/* line-height:23px; */
 background:#BFFFF0;
 box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); 
 border-top:1px solid  #999;
 color:#0070f3;
+padding-top: 2rem;
+display:flex;
+flex-direction: column;
+
+
 @media ${device.tablet}{
 flex-direction: row;
 justify-content: space-between;
@@ -89,11 +90,12 @@ margin:0 1rem
 
 export const FooterContacts = styled.div`
 display:flex;
-flex-direction: column;
+margin:auto;
+   flex-direction: row;
 gap:1rem;
 
 @media ${device.tablet}{
-    flex-direction: row;
+ 
 justify-content: space-between;
 
 }

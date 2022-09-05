@@ -39,13 +39,15 @@ const Footer = () => {
 
                   </FooterLinks>
   </div>
-           
+          </FooterLinksColumn> 
 
+
+          <FooterContacts>
            <div>
                   <h2>
                       Contacts
                   </h2>
-                  <FooterContacts>
+          
 
 
 
@@ -55,10 +57,11 @@ const Footer = () => {
                       <h3>
                           LinkedIn
                       </h3>
+              </div>
                   </FooterContacts>
-           </div>
+          
       
-  </FooterLinksColumn>
+
    </FooterContainer>
   )
 }

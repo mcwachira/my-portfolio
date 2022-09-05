@@ -2,6 +2,7 @@ import React from 'react'
 import { getAllPosts } from '@/lib/posts'
 import { BlogPost } from '@/components/index'
 import styled from 'styled-components'
+import {device}from '@/utils/devices'
 
 
 const BlogContainer = styled.div`
@@ -20,10 +21,19 @@ const BlogCategory = styled.div`
 `
 
 const NoteToSelf =styled.h1`
-text-align: center;
-padding:1rem 10rem;
+    text-align: center;
+font-size:1.7rem;
+line-height:2rem;
+
+@media ${device.tablet}{
+
+
 font-size: 2.0rem;
 line-height:2.2rem;
+padding:1rem 10rem;
+
+}
+
 margin:2rem;
 & > span{
 color:#0070f3;
@@ -37,9 +47,12 @@ margin:2rem auto;
 
 `
 const BlogContentHeading = styled.h2`
-/* margin-left:1rem;
-text-align: left; */
+font-size:2.0rem;
+text-align: center;
+@media ${device.tablet}{
 font-size:2.3rem;
+
+}
 
 `
 

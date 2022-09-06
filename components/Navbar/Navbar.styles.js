@@ -177,7 +177,7 @@ color:#0070f3;
 export const MenuButton= styled.div`
 width:2rem;
 height:2rem;
-color:navy-green;
+color:#0070f3;
 cursor: pointer;
 
 /* margin: auto;
@@ -187,48 +187,5 @@ display: block; */
 display: none;
 }
 `
-// `
-// export const NavbarMenuLine = styled.div`
-// /* top:10px;
-// right:20px; */
-// height:4px;
-// width: 30px;
-// margin:5px;
-// background-color: #0070f3;
-// cursor: pointer;
-// transition: transform .4s ease-in-out;
 
-
-
-// `
-
-// export const NavbarMenuLineOne = styled.div`
-// transform: rotate(0deg) translate(0 ,0);
-// ${props => props.active && ({
-
-//         transform: 'rotate(-45deg) translate(- 5px,6px)',
-//     })
-
-// }
-
-// `
-// export const NavbarMenuLineTwo = styled.div`
-// opacity: inherit;
-// ${props => props.active && ({
-
-//     opacity: '0',
-//     })
-
-// }
-
-// `
-
-// export const NavbarMenuLineThree = styled.div`
-// transform: rotate(0deg) translate(0 ,0);
-// ${props => props.active && ({
-
-//         transform: 'rotate(45deg) translate(- 5px,6px)',
-//     })
-// }
-// `
 

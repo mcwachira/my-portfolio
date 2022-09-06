@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { device } from '../../utils/devices'
 import MyLink from '../Link'
+import Link from 'next/link'
 import { ArrowRight } from '@styled-icons/bootstrap/ArrowRight'
 
 
-export const PostCard = styled(MyLink)`
+export const PostCard = styled.div`
 padding:.9rem;
 width:100%;
-background:#FFEFFD;
+background:#BFFFF0;
 border: 1px solid #eaeaea;
 border-radius: 10px;
 display: flex;
@@ -90,7 +91,7 @@ font-size: 1.2rem;
 
 
 `
-export const PostLink = styled(MyLink)`
+export const PostLink = styled.div`
 display:flex;
 text-align: center;
 

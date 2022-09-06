@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { device } from '../../utils/devices'
-import MyLink from '../Link'
+import Link from 'next/link'
 import { ArrowRight } from '@styled-icons/bootstrap/ArrowRight'
 
 
-export const BlogPostCard = styled(MyLink)`
+export const BlogPostCard = styled.div`
 width:100%;
 /* height:.5rem; */
 background:#BFFFF0;
@@ -17,6 +17,12 @@ gap: 3rem;
 margin:3rem auto ;
 transition:all .3s ease-in-out;
 
+&:hover,
+&:active{
+    border-bottom: 5px solid  #0AC2C2;
+    transform: translateY(-1rem);
+    color: #0AC2C2;
+}
 /* &:hover,
 &:active{
     border: 5px solid  #0AC2C2;
@@ -44,7 +50,7 @@ font-size: 1.2rem;
 color:#000;
 
 `
-export const BlogPostLink = styled(MyLink)`
+export const BlogPostLink = styled(Link)`
 display:flex;
 align-items: center;
 margin-left: 2rem;

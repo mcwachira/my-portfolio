@@ -6,11 +6,13 @@ import { Calendar } from 'styled-icons/zondicons'
 import { Watch } from 'styled-icons/material-outlined'
 // import { Watch } from 'styled-icons/boxicons-solid'
 import { Eye } from 'styled-icons/bootstrap'
+import Link from 'next/link'
 
 const Post = ({post}) => {
 
+    // #CCD6F6
   return (
-      <PostCard href={`/blog/${post.slug}`}>
+      <PostCard>
     {/* <Image src={post.frontmatter.cover_image} alt={post.frontmatter.title}
     height={200} width={100}/> */}
          
@@ -38,7 +40,13 @@ const Post = ({post}) => {
 
           
 <PostBody>
-              <PostHeading> {post.frontmatter.title}</PostHeading>
+
+              <Link href={`/blog/${post.slug}`}>
+                  <a>
+                      <PostHeading> {post.frontmatter.title}</PostHeading>
+                  </a>
+              </Link>
+           
     <PostExcerpt>
         {post.frontmatter.excerpt}
     </PostExcerpt>

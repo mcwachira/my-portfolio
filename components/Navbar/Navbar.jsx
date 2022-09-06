@@ -28,14 +28,17 @@ if(!mounted){
   return (
   <header>
       <NavbarMobileMenu active={menu}>
-        <div styles={{
+        {/* <div styles={{
         float: 'left', width:'100%', padding:'1.25rem'
         }}>
       <div styles={{
           display: 'block', float: 'right', position: 'relative', top: '-1.75rem',
           marginTop: '1.5rem', height: '2rem'
-        }}>
-          <MenuButton
+        }}> */}
+        <MenuButton style={{
+          display: 'block', float: 'right', position: 'relative',
+          marginTop: '1.5rem' 
+}}
             aria-label="close menu button"
            
               onClick={() => ShowMenu(!menu)}
@@ -56,8 +59,8 @@ if(!mounted){
               />
             </svg>
           </MenuButton>
-        </div>
-        </div>
+        {/* </div>
+        </div> */}
 
         <MobileMenuContainer >
           <MobileMenu >

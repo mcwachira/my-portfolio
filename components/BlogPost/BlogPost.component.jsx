@@ -1,23 +1,31 @@
 import React from 'react'
 import Image from 'next/image'
 import { BlogPostCard, BlogPostBody, BlogPostHeading, BlogPostExcerpt, BlogPostLink, LinkArrow } from './BlogPost.style'
-
+import Link from 'next/link'
 
 const BlogPost = ({ post }) => {
 
     return (
-        <BlogPostCard href={`/blog/${post.slug}`}>
+
+       
+                          
+        <BlogPostCard>
             <BlogPostBody>
+                <Link href={`/blog/${post.slug}`}>
+                    <a>
                 <BlogPostHeading> {post.frontmatter.title}</BlogPostHeading>
+                    </a>
+                </Link>
                 <BlogPostExcerpt>
                     {post.frontmatter.excerpt}
                 </BlogPostExcerpt>
-                <BlogPostLink href={`/blog/${post.slug}`}> Read More <span> <LinkArrow />  </span>  </BlogPostLink>
+                <BlogPostLink href={`/blog/${post.slug}`}> Read More   </BlogPostLink>
            
         
             </BlogPostBody>
           
         </BlogPostCard>
+       
     )
 }
 

@@ -18,7 +18,8 @@ margin-top:5rem
 const BlogCategory = styled.div`
  display: flex;
  align-items: center;
- gap:2rem;
+ gap:1rem;
+ flex-wrap: wrap;
 
 
 
@@ -53,8 +54,13 @@ color:#0070f3;
 `
 
 const BlogContent = styled.div`
-width:80%;
+width:100%;
 margin:1rem auto;
+
+@media ${device.tablet}{
+width:80%;
+
+}
 
 
 `

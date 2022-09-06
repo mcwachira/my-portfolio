@@ -42,15 +42,26 @@ margin-top:5rem;
 `
 
 const CategoryContent = styled.div`
-width:60%;
+
+width:100%;
 margin:2rem auto;
+@media ${device.tablet}{
+width:60%;
+
+}
+
+
 
 
 `
 const Category = styled.div`
+display:none;
+
+         @media ${device.tablet}{
+display:flex;
 width:20%;
 margin:2rem auto;
-
+         }
 
 `
 

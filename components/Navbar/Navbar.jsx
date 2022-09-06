@@ -12,7 +12,7 @@ const Navbar = () => {
 
 const toggleMenu =() => {
   ShowMenu(!menu)
-  console.log('clikced')
+  ('clikced')
 
 }
 
@@ -67,7 +67,7 @@ if(!mounted){
             <NavbarLinks >
               <NavbarLink href='/projects'>Projects</NavbarLink>
               <NavbarLink href='/blog'>Blog</NavbarLink>
-              <NavbarLink href='/Snippets'>Snippets</NavbarLink>
+              <NavbarLink href='/snippets'>Snippets</NavbarLink>
               <NavbarLink href='/newsletter'>NewsLetter</NavbarLink>
               <NavbarLink href='/contact'>Contact </NavbarLink>
             </NavbarLinks>
@@ -101,7 +101,7 @@ if(!mounted){
             <NavbarLinks >
               <NavbarLink href='/projects'>Projects</NavbarLink>
               <NavbarLink href='/blog'>Blog</NavbarLink>
-              <NavbarLink href='/Snippets'>Snippets</NavbarLink>
+              <NavbarLink href='/snippets'>Snippets</NavbarLink>
               <NavbarLink href='/newsletter'>NewsLetter</NavbarLink>
               <NavbarLink href='/contact'>Contact </NavbarLink>
             </NavbarLinks>

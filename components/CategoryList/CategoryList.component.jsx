@@ -3,7 +3,7 @@ import Link from '../Link'
 import { CategoryContainer, CategoryItems, CategoryItem, CategoryTitle } from './CategoryList.style'
 
 const CategoryList = ({categories}) => {
-    // console.log(categories)
+    // (categories)
     return (
    <CategoryContainer>
 

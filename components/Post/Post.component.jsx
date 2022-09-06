@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 const Post = ({post}) => {
 
-    // #CCD6F6
+    //
   return (
       <PostCard>
     {/* <Image src={post.frontmatter.cover_image} alt={post.frontmatter.title}

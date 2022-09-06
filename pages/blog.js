@@ -126,13 +126,7 @@ export const getStaticProps = async () => {
 
     //gives us a an array with non repeating values
     const uniqueCategories = [...new Set(categories)]
-     console.log(uniqueCategories)
 
-  
-
-    //console.log(categories)
-
-    /* console.log(posts) */
 
     return {
         props:{

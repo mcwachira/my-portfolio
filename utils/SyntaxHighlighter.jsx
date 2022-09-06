@@ -47,7 +47,7 @@ margin-right: -32px;
 `
 
 const SyntaxHighlighter = ({children}) => {
-console.log(children)
+// console.log(children)
     //access the code in our mdx files 
     const code = children.props.children;
     const language = children.props.className?.replace("language-", "").trim();
@@ -71,7 +71,7 @@ console.log(children)
                         {language.toUpperCase()}
                     </LanguageTitleContainer>
                 )}
-                {console.log(language)}
+                {/* {console.log(language)} */}
                     <PreBlock className={className} style={{ ...style }}>
                         {tokens.slice(0, -1).map((line, i) => (
                             //getLineprops and getToken props for styling

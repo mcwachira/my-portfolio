@@ -3,6 +3,8 @@ import { getAllPosts } from '@/lib/posts'
 import { BlogPost } from '@/components/index'
 import styled from 'styled-components'
 import {device}from '@/utils/devices'
+import Link from '@/components/Link'
+import { CategoryList } from '@/components/index'
 
 
 const BlogContainer = styled.div`
@@ -15,10 +17,20 @@ margin-top:5rem
 
 const BlogCategory = styled.div`
  display: flex;
- justify-content: space-between;
  align-items: center;
+ gap:2rem;
 
-`
+
+
+ `
+ const LanguageCategory = styled.h3`
+ padding:.5rem .5rem;
+ border-radius: 5px;
+ background:#BFFFF0;
+ font-size: 1.1rem;
+border: 1px solid #0AC2C2;
+cursor:pointer;
+ `
 
 const NoteToSelf =styled.h1`
     text-align: center;
@@ -42,7 +54,7 @@ color:#0070f3;
 
 const BlogContent = styled.div`
 width:80%;
-margin:2rem auto;
+margin:1rem auto;
 
 
 `
@@ -56,8 +68,8 @@ font-size:2.3rem;
 
 `
 
-const blog = ({posts}) => {
-    console.log(posts)
+const blog = ({posts, categories}) => {
+
   return (
     <BlogContainer>
 
@@ -66,9 +78,26 @@ const blog = ({posts}) => {
                  
               </span>  </NoteToSelf>
 
-              
+
               <BlogContent>
               <BlogContentHeading>All Posts</BlogContentHeading>
+              <BlogCategory>
+
+
+                  {categories.map((category, index) => (
+                  
+                <Link key={index} href={`/blog/category/${category.toLowerCase()}`}>
+                          <LanguageCategory>
+                              {category}
+                          </LanguageCategory> 
+                 
+
+                </Link>
+            ))}
+                     
+
+                
+              </BlogCategory>
               {posts.map((post, index) => (
                   <BlogPost key={index} post={post} />
               ))}
@@ -86,11 +115,23 @@ export const getStaticProps = async () => {
 
     const posts =  getAllPosts()
 
-    console.log(posts)
+    const categories = posts.map((post) => post.frontmatter.category)
+
+
+    //gives us a an array with non repeating values
+    const uniqueCategories = [...new Set(categories)]
+     console.log(uniqueCategories)
+
+  
+
+    //console.log(categories)
+
+    /* console.log(posts) */
 
     return {
         props:{
-            posts
+            posts,
+            categories:uniqueCategories
         }
     }
 }

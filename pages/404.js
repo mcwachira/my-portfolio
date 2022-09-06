@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 import {device} from '@/utils/devices'
+
+
+
  const  NotFoundContainer = styled.div`
 
  display: flex;
@@ -33,3 +36,4 @@ const FourOFour = () => {
 }
 
 export default FourOFour;
+

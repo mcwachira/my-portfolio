@@ -13,6 +13,8 @@ const BlogPost = ({ post }) => {
                     {post.frontmatter.excerpt}
                 </BlogPostExcerpt>
                 <BlogPostLink href={`/blog/${post.slug}`}> Read More <span> <LinkArrow />  </span>  </BlogPostLink>
+           
+        
             </BlogPostBody>
           
         </BlogPostCard>

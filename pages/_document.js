@@ -23,8 +23,8 @@ class MyDocument extends Document {
             gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
               page_path: window.location.pathname,
 
-                <!-- this line is used to supress
-              the SameSite warning that will be throwed -->
+            //     <!-- this line is used to supress
+            //   the SameSite warning that will be throwed -->
               cookie_flags: 'SameSite=None;Secure'
             });
           `,

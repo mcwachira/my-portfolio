@@ -11,7 +11,7 @@ const Layout = ({ children, ...customMeta}) => {
   const meta = {
     title: 'Welcome to Mcwachira&#8216;s Personal website',
     keywords: ['React', 'Redux', 'Typescript', 'React Native', 'Nextjs', 'Remix', 'Gatsbyjs', 'Nodejs', 'Deno', 'bun', 'Fresh', 'rust', 'Astro', 'solidJs', 'testing', 'cloud computing ', 'aws', 'azure', 'docker', 'Kubernetes', 'linux'],
-    description: 'This site contains technical articles written by me in my continuous Journey of learning ,Software development and also some of the projects I have done throughout the years.',
+    description: 'This site contains technical articles written by me in my continuous Journey of learning Software development and also some of the projects I have done throughout the years.',
     type:'website',
     ...customMeta
   }
@@ -36,7 +36,7 @@ const Layout = ({ children, ...customMeta}) => {
 
 
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Your site name" />
+        <meta property="og:site_name" content="mcwachira.dev" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />

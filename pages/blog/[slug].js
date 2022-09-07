@@ -70,12 +70,12 @@ const PostPage = ({frontmatter, code, slug}) => {
     },[code])
 
   return (
-    <Layout
-     title={frontmatter.title}
+
+
+    <PostPageContainer      title={frontmatter.title}
  description={frontmatter.excerpt}
  date={frontmatter.date}
  type={frontmatter.article}>
-    <PostPageContainer>
 
 
 <PostContainer>
@@ -104,7 +104,7 @@ const PostPage = ({frontmatter, code, slug}) => {
 
  </PostPageContainer>
 
-    </Layout>
+  
   )
 }
 

@@ -15,7 +15,8 @@ margin:1rem auto;
 const MdxImage = ({alt, src, width, height }) => {
   return (
     <ImageContainer>
-        <Image src={src} alt={alt} layout='fill' width={width} height={height} objectFit='contain'/>
+      <Image src={src} alt={alt} layout='fill' width={width} height={height} objectFit='contain' blurDataURL="URL"
+        placeholder="blur" />
     </ImageContainer>
   )
 }

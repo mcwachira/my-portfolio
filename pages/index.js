@@ -23,8 +23,18 @@ height: 70vh;
 
 `
 const Title = styled.h1`
+margin-top:1.5rem;
+font-size:1.1rem;
+
+@media ${device.mobileL}{
+font-size:1.7rem;
+}
+@media ${device.tablet}{
 font-size:2rem;
 color:#000;
+}
+
+
 
 @media ${device.tablet}{
 font-size:2.5rem;
@@ -43,7 +53,11 @@ color:#0070f3
 
 const Motto = styled.p`
 font-weight: 300;
-font-size:1.2rem;
+font-size:.9rem;
+
+@media ${device.mobileL}{
+font-size:1.3rem;
+}
 @media ${device.tablet}{
 font-size:1.6rem;
 
@@ -137,22 +151,22 @@ export default function Home({posts}) {
         <SocialLinks>
          
         <li>
-       <a href="">
+            <a href="https://twitter.com/mc_wachira/" target="_blank" rel='noreferrer'>
               <BlueTwitter size='30' />
        </a>
         </li>
           <li>
-            <a href="">
+            <a href="https://www.linkedin.com/in/maina-wachira/" target="_blank" rel='noreferrer'>
               <BlueLinkedIn size='30'/>
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="https://github.com/mcwachira" target="_blank" rel='noreferrer'>
               <BlueGithub size='30' />
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="" target="_blank" rel='noreferrer'>
               <BlueInstagram size='30' />
             </a>
           </li>

@@ -52,10 +52,16 @@ const Footer = () => {
 
 
                       <h3>
+                      <a href="https://twitter.com/mc_wachira/" target="_blank" rel='noreferrer'>
                           Twitter
+                      </a>
+                     
                       </h3>
                       <h3>
+                      <a href="https://www.linkedin.com/in/maina-wachira/" target="_blank" rel='noreferrer'>
                           LinkedIn
+                      </a>
+                   
                       </h3>
               </div>
                   </FooterContacts>

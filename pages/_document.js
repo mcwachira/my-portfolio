@@ -12,6 +12,7 @@ class MyDocument extends Document {
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
                     <script
                         async
+                        strategy="afterInteractive"
                         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
                     />
                     <script

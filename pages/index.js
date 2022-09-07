@@ -1,11 +1,11 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import styled from 'styled-components'
 import { Twitter, LinkedinSquare ,Github, Instagram} from 'styled-icons/boxicons-logos'
 import { Blog } from 'styled-icons/icomoon'
 import { getAllPosts } from '@/lib/posts'
-import {Post} from '@/components/index'
 import {device} from '@/utils/devices'
 const TopContainer = styled.div`
 display: flex;
@@ -112,6 +112,8 @@ color:#000;
 
 
 `
+//importing the post component dynamically o improve speed
+const Post = dynamic(() => import('@/components/Post/Post.component'));
 export default function Home({posts}) {
 
 

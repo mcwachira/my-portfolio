@@ -3,10 +3,13 @@ import Image from 'next/image'
 import styled from 'styled-components'
 
 
-const ImageContainer = styled.div`
+const ImageContainer = styled.span`
 display: flex;
+position: relative;
 align-items: center;
 margin:1rem auto;
+/* left: 0px;
+ top: 0px; */
 
 `
 const MdxImage = ({alt, src, width, height }) => {

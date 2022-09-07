@@ -74,7 +74,7 @@ const PostPage = ({frontmatter, code, slug}) => {
      title={frontmatter.title}
  description={frontmatter.excerpt}
  date={frontmatter.date}
- type={article}>
+ type={frontmatter.article}>
     <PostPageContainer>
 
 

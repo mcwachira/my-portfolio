@@ -139,7 +139,7 @@ export const getStaticProps = async({params:{category_name}}) => {
     // (uniqueCategories)
 
     const categoryPosts = posts.filter((post) => post.frontmatter.category.toLowerCase() === category_name)
-    (categoryPosts)
+
 
      /* (categories) */
     return {

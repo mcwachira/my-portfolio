@@ -139,7 +139,7 @@ const posts = fileNames.map((fileName) => {
 })
 
 
-(posts)
+
 
 
   const categories = posts.map((post) => post.frontmatter.category)
@@ -147,13 +147,6 @@ const posts = fileNames.map((fileName) => {
 
   //gives us a an array with non repeating values
   const uniqueCategories = [...new Set(categories)]
-  (uniqueCategories)
-
-
-
-  //(categories)
-
-  /* (posts) */
 
   return {
     props: {

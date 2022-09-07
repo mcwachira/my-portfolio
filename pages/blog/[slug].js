@@ -1,14 +1,11 @@
 import React, {useMemo} from 'react'
 import styled from 'styled-components'
-import matter from 'gray-matter'
 import Link from '@/components/Link'
-import Layout from '@/components/Layout'
-import Image from 'next/image'
 import { getSinglePost, getAllPosts} from '../../lib/posts'
 import { getMDXComponent } from "mdx-bundler/client";
 import {device} from '@/utils/devices'
 import SyntaxHighlighter from '@/utils/SyntaxHighlighter'
-import { ArrowLeft } from 'styled-icons/bootstrap'
+import MdxImage from '@/utils/MdxImage';
 
 
 const BackButton = styled(Link)`
@@ -91,7 +88,8 @@ const PostPage = ({frontmatter, code, slug}) => {
               {frontmatter.slug} */}
 
           <Component  language={frontmatter.language} components={{
-            pre:SyntaxHighlighter
+            pre:SyntaxHighlighter,
+            img:MdxImage
           }}/> 
                
               </PostTextContainer>

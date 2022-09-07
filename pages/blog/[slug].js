@@ -6,7 +6,7 @@ import { getMDXComponent } from "mdx-bundler/client";
 import {device} from '@/utils/devices'
 import SyntaxHighlighter from '@/utils/SyntaxHighlighter'
 import MdxImage from '@/utils/MdxImage';
-
+import Layout from '@/components/Layout';
 
 const BackButton = styled(Link)`
 background-color: #0070f3;
@@ -70,6 +70,11 @@ const PostPage = ({frontmatter, code, slug}) => {
     },[code])
 
   return (
+    <Layout
+     title={frontmatter.title}
+ description={frontmatter.excerpt}
+ date={frontmatter.date}
+ type={article}>
     <PostPageContainer>
 
 
@@ -98,6 +103,8 @@ const PostPage = ({frontmatter, code, slug}) => {
 
 
  </PostPageContainer>
+
+    </Layout>
   )
 }
 

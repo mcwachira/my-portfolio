@@ -72,7 +72,7 @@ if(!mounted){
               <NavbarLink href='/contact'>Contact </NavbarLink>
             </NavbarLinks>
 
-            {mounted && (<ThemeToggler >
+            {mounted && (<ThemeToggler aria-label='change theme' >
               {theme !== 'dark' ? <MoonIcon size={30} onClick={() => setTheme('dark')} /> : <SunIcon size={30} onClick={() => setTheme('light')} />}
 
 

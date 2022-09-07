@@ -1,4 +1,4 @@
-export const GA_TRACING_ID = NEXT_PUBLIC_GA_TRACKING_ID;
+export const GA_TRACING_ID =process.env.NEXT_PUBLIC_GA_TRACKING_ID;
 
 
  export const PageView = (url) => {

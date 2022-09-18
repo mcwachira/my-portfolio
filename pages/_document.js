@@ -33,6 +33,7 @@ class MyDocument extends Document {
                     />
                 </Head>
                 <body>
+                <Script>0</Script>
                     
                     <Main/>
                     <NextScript/>

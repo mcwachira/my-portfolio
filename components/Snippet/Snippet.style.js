@@ -18,10 +18,11 @@ color:#000;
 margin:3rem auto ;
 transition:all .3s ease-in-out;
 
-&:hover{
-    border-bottom: 5px solid  #7864EA;
+&:hover,
+&:active{
+    border-bottom: 5px solid  #0AC2C2;
     transform: translateY(-1rem);
-    color:#0070f3;
+    /* color: #0AC2C2; */
 }
 
 `

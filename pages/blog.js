@@ -29,6 +29,7 @@ const BlogCategory = styled.div`
  border-radius: 5px;
  background:#BFFFF0;
  font-size: 1.1rem;
+ color:var(--color-text-secondary);
 border: 1px solid #0AC2C2;
 cursor:pointer;
  `

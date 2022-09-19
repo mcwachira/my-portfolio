@@ -5,10 +5,10 @@ import MyLink from '../Link'
 export const FooterContainer = styled.div`
 font-size:13px;
 /* line-height:23px; */
-background:#BFFFF0;
+    background: var(--color-bg-primary);
+  color: var(--color-text-primary);
 box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); 
 border-top:1px solid  #999;
-color:#0070f3;
 padding-top: 2rem;
 display:flex;
 flex-direction: column;

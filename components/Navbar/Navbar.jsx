@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import { useTheme } from 'next-themes'
 import {
   NavbarMobileMenu, MobileMenuContainer , MobileMenu, NavbarMenuContainer, NavContainer, NavbarLogo, NavbarMenu, NavbarLinks, NavbarLink, ThemeToggler, SunIcon, MoonIcon, MenuButton
 } from './Navbar.styles'
 import { Sun, MoonStarsFill } from 'styled-icons/bootstrap'
-const Navbar = () => {
+const ToggleButton = dynamic(() => import('../Button/ToggleButton'), {
+  ssr: false
+}
+)
 
+
+const Navbar = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
   const [menu, ShowMenu]= useState(false)
@@ -72,12 +78,15 @@ if(!mounted){
               <NavbarLink href='/contact'>Contact </NavbarLink>
             </NavbarLinks>
 
-            {mounted && (<ThemeToggler aria-label='change theme' >
+            {/* {mounted && (<ThemeToggler aria-label='change theme' >
               {theme !== 'dark' ? <MoonIcon size={30} onClick={() => setTheme('dark')} /> : <SunIcon size={30} onClick={() => setTheme('light')} />}
 
 
             </ThemeToggler>)
-            }
+            } */}
+
+
+            {mounted && <ToggleButton/>}
 
 
 
@@ -106,12 +115,13 @@ if(!mounted){
               <NavbarLink href='/contact'>Contact </NavbarLink>
             </NavbarLinks>
 
-         { mounted &&  (<ThemeToggler >
+         {/* { mounted &&  (<ThemeToggler >
               {theme !== 'dark' ? <MoonIcon size={30} onClick={() => setTheme('dark')} /> : <SunIcon size={30} onClick={() => setTheme('light')} />}
 
 
             </ThemeToggler>)
-}
+} */}
+            {mounted && <ToggleButton />}
           </NavbarMenu>
           <MenuButton
             aria-label="Open menu button"

@@ -49,7 +49,7 @@ width:50%;
 const PostTitle = styled.h1`
 font-size: 3rem;
 line-height: 3.2rem;
-color:#000;
+color:var(--color-text-secondary);
 text-align: center;
 margin: 3rem auto;
 

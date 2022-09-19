@@ -17,8 +17,8 @@ color:#0AC2C2;
 const PostPageContainer = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #FFFFFE;
-    /* background: rgb(255, 255, 254); */
+    background: var(--color-bg-primary);
+  color: var(--color-text-primary);
     transition: background 350ms;
     margin:8rem auto;
 
@@ -49,6 +49,7 @@ line-height: 3.2rem;
 color:#000;
 text-align: center;
 margin: 3rem auto;
+  color: var(--color-text-secondary);
 
 `
 const PostTextContainer = styled.div`

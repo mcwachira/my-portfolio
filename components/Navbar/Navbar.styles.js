@@ -5,7 +5,7 @@ import MyLink from '../Link'
 
 
 export const NavbarMobileMenu = styled.div`
-background: #FFFFFF;
+  background: var(--color-bg-primary);
 position: fixed; 
 right:0;
 z-index: 60; 
@@ -67,8 +67,9 @@ top :-1rem ;
 display: flex; 
 width: 100%; 
 margin:0 auto;
-background: #FFFFFF;
-color:#0070f3;
+  background: var(--color-bg-primary);
+ color:var(--color-text-primary);
+border-bottom:.1px solid  var(--color-text-primary);
 
 
 `
@@ -95,12 +96,13 @@ font-size: 1.5rem;
 @media ${device.tablet}{
 margin:auto;
 }
-color:#0070f3;
+ color: var(--color-text-primary);
 
 `
 
 export const NavbarMenu = styled.div`
 display:none;
+
 @media ${device.tablet}{
     margin: auto;
   display: flex;

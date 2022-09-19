@@ -2,6 +2,16 @@ import Document, {Html, Head, Main, NextScript} from 'next/document'
 import Script from 'next/script'
 class MyDocument extends Document {
     render(){
+        const setInitialTheme = `
+        const getUserPreference = () =>{
+            if(window.localStorage.getItem('theme')){
+                return window.localStorage.getItem('theme')
+            }
+            return window.matchMedia('(preference-color-scheme:dark)').matches ? 'dark':'light
+        }
+        document.body.dataset.theme = getUserPreference()
+        
+        `
 
 
         return (
@@ -29,7 +39,7 @@ class MyDocument extends Document {
               cookie_flags: 'SameSite=None;Secure'
             });
           `,
-                        }}
+                            setInitialTheme  }}
                     />
                 </Head>
                 <body>

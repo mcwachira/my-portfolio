@@ -7,6 +7,15 @@ import { Twitter, LinkedinSquare ,Github, Instagram} from 'styled-icons/boxicons
 import { Blog } from 'styled-icons/icomoon'
 import { getAllPosts } from '@/lib/posts'
 import {device} from '@/utils/devices'
+
+
+//import dynamically
+
+const  ToggleButton  = dynamic(() =>import( '@/components/Button/ToggleButton'),{
+  ssr:false
+}
+)
+
 const TopContainer = styled.div`
 display: flex;
 height: 60vh;
@@ -16,6 +25,7 @@ justify-content: center;
 margin-right: auto;
 margin-left: auto;
 text-align: center;
+margin-top:5rem;
 
 @media ${device.tablet}{
 height: 70vh;
@@ -25,6 +35,7 @@ height: 70vh;
 const Title = styled.h1`
 margin-top:1.5rem;
 font-size:1.1rem;
+color:var(--color-text-primary);
 
 @media ${device.mobileL}{
 font-size:1.7rem;
@@ -54,6 +65,7 @@ color:#0070f3
 const Motto = styled.p`
 font-weight: 300;
 font-size:.9rem;
+color:var(--color-text-primary);
 
 @media ${device.mobileL}{
 font-size:1.3rem;
@@ -80,21 +92,21 @@ margin-top: 1rem;
 
 `
 const BlueBlog = styled(Blog)`
-color:#0070f3
+ color: var(--color-text-primary);
 `
 
 const BlueTwitter = styled(Twitter)`
-color:#0070f3
+ color: var(--color-text-primary);
 `
 const BlueLinkedIn = styled(LinkedinSquare)`
-color:#0070f3
+ color: var(--color-text-primary);
 `
 const BlueGithub = styled(Github)`
-color:#0070f3
+ color: var(--color-text-primary);
 `
 
 const BlueInstagram = styled(Instagram)`
-color:#0070f3
+ color: var(--color-text-primary);
 `
 const BodyContainer = styled.div`
 width: 100%;
@@ -112,16 +124,15 @@ grid-template-columns: repeat(3, 1fr);
 }
 `
 const PostHeading = styled.h1`
-color:#0070f3;
+color:var(--color-text-secondary);
 font-size:2.5rem;
 font-weight:bold;
 padding-bottom:1rem;
-border-bottom:4px solid #330;
+border-bottom:4px solid  var(--color-text-primary);
 
 
 @media ${device.tablet}{
 font-size:3rem;
-color:#000;
 }
 
 
@@ -173,9 +184,11 @@ export default function Home({posts}) {
         </SocialLinks>
       </TopContainer>
      
+ 
 
       <PostHeading>
         Latest Posts
+      
       </PostHeading>
       <BodyContainer>
         {posts.map((post, index) => (

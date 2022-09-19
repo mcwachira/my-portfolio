@@ -12,7 +12,7 @@ import { BlogPost } from '@/components/index'
 
 
 const CategoryHeading = styled.h1`
-          color:#0070f3;
+         color:var(--color-text-secondary);
           font-size:2.5rem;
           font-weight:bold;
           padding-bottom:1rem;
@@ -21,7 +21,7 @@ const CategoryHeading = styled.h1`
 
           @media ${device.tablet}{
               font-size:3rem;
-          color:#000;
+          color:var(--color-text-secondary);
           }
 
           

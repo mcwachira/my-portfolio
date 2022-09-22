@@ -86,7 +86,7 @@ if(!mounted){
             } */}
 
 
-            {mounted && <ToggleButton/>}
+        <ToggleButton/>
 
 
 
@@ -121,7 +121,7 @@ if(!mounted){
 
             </ThemeToggler>)
 } */}
-            {mounted && <ToggleButton />}
+         <ToggleButton />
           </NavbarMenu>
           <MenuButton
             aria-label="Open menu button"

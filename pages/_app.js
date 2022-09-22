@@ -3,21 +3,21 @@ import { createGlobalStyle } from 'styled-components'
 import Layout from '@/components/Layout'
 import * as gtag from '@/utils/gtag'
 import Router from 'next/router'
-import {ThemeProvider} from 'next-themes'
+// import {ThemeProvider} from 'next-themes'
 import { useEffect } from 'react'
 
 // Your themeing variables
-const GlobalStyle = createGlobalStyle`
-  :root {
-    --fg: #000;
-    --bg: #fff;
-  }
+// const GlobalStyle = createGlobalStyle`
+//   :root {
+//     --fg: #000;
+//     --bg: #fff;
+//   }
 
-  [data-theme="dark"] {
-    --fg: #000;
-    --bg: #000;
-  }
-`
+//   [data-theme="dark"] {
+//     --fg: #000;
+//     --bg: #000;
+//   }
+// `
 
 
 function MyApp({ Component, pageProps }) {

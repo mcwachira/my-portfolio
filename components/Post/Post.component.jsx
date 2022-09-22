@@ -52,7 +52,7 @@ const Post = ({post}) => {
     </PostExcerpt>
               
 </PostBody>
-          <PostLink href={`/blog/${post.slug}`}> Read More <span> <LinkArrow/>  </span>  </PostLink>
+          <PostLink href={`/blog/${post.slug}`}> Read More  </PostLink>
     </PostCard>
   )
 }

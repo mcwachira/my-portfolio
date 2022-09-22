@@ -7,7 +7,7 @@ import { Twitter, LinkedinSquare ,Github, Instagram} from 'styled-icons/boxicons
 import { Blog } from 'styled-icons/icomoon'
 import { getAllPosts } from '@/lib/posts'
 import {device} from '@/utils/devices'
-
+import ContactMe from '@/components/ContactMe/ContactMe'
 
 //import dynamically
 
@@ -196,6 +196,7 @@ export default function Home({posts}) {
         ))}
 
       </BodyContainer>
+      <ContactMe/>
     </div>
   )
 }

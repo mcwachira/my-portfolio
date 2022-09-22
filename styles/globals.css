@@ -18,6 +18,7 @@ body[data-theme="light"]{
 
  --color-text-primary: #27201a;
  --color-text-secondary: #1e90ff;
+ --color-text-form:#27201a;
  --color-bg-primary: #fff;
  --color-bg-toggle: #1e90ff;
  --color-bg-card:#BFFFF0;
@@ -27,6 +28,7 @@ body[data-theme="light"]{
 body[data-theme="dark"] {
   --color-text-primary: #e3e3e3;
   --color-text-secondary: #ff6b00;
+   --color-text-form:#fff;
   --color-bg-primary: #252525;
   --color-bg-toggle: #a9a9a9;
    --color-bg-card:#e3e3e3;

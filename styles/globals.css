@@ -18,6 +18,7 @@ body[data-theme="light"]{
 
  --color-text-primary: #27201a;
  --color-text-secondary: #1e90ff;
+  --color-text-tertiary: #374151;
  --color-text-form:#27201a;
  --color-bg-primary: #fff;
  --color-bg-toggle: #1e90ff;
@@ -33,6 +34,9 @@ body[data-theme="dark"] {
   --color-bg-toggle: #a9a9a9;
    --color-bg-card:#e3e3e3;
    --color-card-logo-color:#27281a;
+     --color-text-tertiary: #374151;
+
+
   /* color:#ff6b00 */
 }
 /* 

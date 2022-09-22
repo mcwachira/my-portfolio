@@ -137,6 +137,11 @@ font-size:3rem;
 
 
 `
+const ContactContainer = styled.div`
+background: #EFF6FF;
+
+`
+
 //importing the post component dynamically o improve speed
 const Post = dynamic(() => import('@/components/Post/Post.component'));
 export default function Home({posts}) {
@@ -196,7 +201,11 @@ export default function Home({posts}) {
         ))}
 
       </BodyContainer>
-      <ContactMe/>
+
+      <ContactContainer>
+        <ContactMe />
+      </ContactContainer>
+      
     </div>
   )
 }

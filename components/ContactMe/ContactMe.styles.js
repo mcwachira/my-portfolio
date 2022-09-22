@@ -106,9 +106,9 @@ justify-content: center;
 align-items: center;
 /* align-self: flex-start; */
 background: #fff;
-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 7px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 8px 5px 5px 6px rgba(0,0,0,0.21);
+-webkit-box-shadow: 8px 5px 5px 6px rgba(0,0,0,0.21);
+-moz-box-shadow: 8px 5px 5px 6px rgba(0,0,0,0.21);
 @media ${device.tablet}{
     margin:5rem auto;
 margin-right: 5rem;

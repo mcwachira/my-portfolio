@@ -122,7 +122,7 @@ const ContactMe  =() => {
                     </FormTitle>
 
                     <FieldSet>
-                        <InputField className='text-white' placeholder="Full Name" name="full Name" type="text" tabIndex="1" autoFocus onChange={(e) => setFullname(e.target.value)} />
+                        <InputField className='text-white' placeholder="Full Name" name="full Name" type="text" tabIndex="1" value={fullname} autoFocus onChange={(e) => setFullname(e.target.value)} />
                  
                     </FieldSet>
                 {error?.fullname && (
@@ -132,7 +132,7 @@ const ContactMe  =() => {
                 )}
 
                     <FieldSet>
-                        <InputField className='text-white' placeholder="Your Email Address" name="email" type="email" tabIndex="2" onChange={(e) => setEmail(e.target.value)} />
+                        <InputField className='text-white' placeholder="Your Email Address" name="email" type="email" tabIndex="2" value={email} onChange={(e) => setEmail(e.target.value)} />
                     
                 
                     </FieldSet>
@@ -143,7 +143,7 @@ const ContactMe  =() => {
                     </ErrorMessage>
                 )}
                     <FieldSet>
-                        <InputField className='text-white' placeholder="subject" name="subject" type="text" tabIndex="1" autoFocus onChange={(e) => setSubject(e.target.value)} />
+                        <InputField className='text-white' placeholder="subject" name="subject" type="text" tabIndex="1" autoFocus value={subject} onChange={(e) => setSubject(e.target.value)} />
                     
                    
                     </FieldSet>
@@ -153,7 +153,7 @@ const ContactMe  =() => {
                     </ErrorMessage>
                 )}
                     <FieldSet>
-                        <TextArea placeholder="Type your message here...." tabIndex="5" name="textarea" onChange={(e) => setMessage(e.target.value)}></TextArea>
+                        <TextArea placeholder="Type your message here...." tabIndex="5" name="textarea" value={message} onChange={(e) => setMessage(e.target.value)}></TextArea>
                
                     </FieldSet>
 

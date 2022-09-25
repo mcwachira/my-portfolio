@@ -32,7 +32,7 @@ cursor: pointer;
     box-shadow: 0 0 5px 2px var(--color-bg-toggle);
   }
 /* background:#1e90ff; */
-transition: background 0.25s ease-in-out;
+/* transition: background 0.25s ease-in-out; */
 
 @media ${device.tablet}{
     margin-left: 5rem;

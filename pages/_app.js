@@ -7,17 +7,17 @@ import Router from 'next/router'
 import { useEffect } from 'react'
 
 // Your themeing variables
-// const GlobalStyle = createGlobalStyle`
-//   :root {
-//     --fg: #000;
-//     --bg: #fff;
-//   }
+const GlobalStyle = createGlobalStyle`
+  :root {
+    --fg: #000;
+    --bg: #fff;
+  }
 
-//   [data-theme="dark"] {
-//     --fg: #000;
-//     --bg: #000;
-//   }
-// `
+  [data-theme="dark"] {
+    --fg: #000;
+    --bg: #000;
+  }
+`
 
 
 function MyApp({ Component, pageProps }) {
@@ -37,6 +37,7 @@ gtag.PageView(url)
     <>
  
         <Layout>
+        <GlobalStyle />
           <Component {...pageProps} />
         </Layout>
  

@@ -11,8 +11,8 @@ body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
   font-family: sans-serif;
-  transition: background 0.25s ease-in-out;
-    
+  /* transition: background 0.25s ease-in-out;
+     */
 }
 body[data-theme="light"]{
 
@@ -51,7 +51,5 @@ a {
 * {
   box-sizing: border-box;
 }
-
-
 
 

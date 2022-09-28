@@ -7,6 +7,7 @@ export const FormContainer = styled.div`
 display: flex;
 flex-direction: column;
 gap:1rem;
+margin-bottom: rem;
 
 @media ${device.tablet}{
 flex-direction: row;
@@ -105,7 +106,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 /* align-self: flex-start; */
-background: #fff;
+background: var( --color-bg-primary);
 box-shadow: 8px 5px 5px 6px rgba(0,0,0,0.21);
 -webkit-box-shadow: 8px 5px 5px 6px rgba(0,0,0,0.21);
 -moz-box-shadow: 8px 5px 5px 6px rgba(0,0,0,0.21);
@@ -126,7 +127,7 @@ export const InputField = styled.input`
     font-size: 1rem;
     /* margin-top: 2rem; */
     background: none;
-   color: var(   --color-text-form) !important;
+   color: var(    --color-text-tertiary) !important;
     &:focus{
          outline: 0;
     border: 1px solid  #10B981;

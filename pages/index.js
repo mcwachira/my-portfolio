@@ -138,7 +138,7 @@ font-size:3rem;
 
 `
 const ContactContainer = styled.div`
-background: #EFF6FF;
+background: var(--color-bg-tertiary);
 
 `
 

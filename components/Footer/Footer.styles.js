@@ -14,6 +14,7 @@ display:flex;
 flex-direction: column;
 
 
+
 @media ${device.tablet}{
 flex-direction: row;
 justify-content: space-between;

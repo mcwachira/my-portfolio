@@ -123,7 +123,7 @@ grid-template-columns: repeat(2, 1fr);
 grid-template-columns: repeat(3, 1fr);
 }
 `
-const PostHeading = styled.h1`
+const PostHeading = styled.h2`
 color:var(--color-text-secondary);
 font-size:2.5rem;
 font-weight:bold;
@@ -143,7 +143,7 @@ background: var(--color-bg-tertiary);
 `
 
 //importing the post component dynamically o improve speed
-const Post = dynamic(() => import('@/components/Post/Post.component'));
+const Post = dynamic(() => import('@/components/Post/Post.component'), {ssr:false}); //maybe fix  
 export default function Home({posts}) {
 
 
@@ -160,7 +160,7 @@ export default function Home({posts}) {
         <Title>
           Hi I&#8216;m  <TitleSpan>Charles Wachira</TitleSpan>
           <Motto>
-            Fullstack Software developer helping startup&#8216; s build software using Javascript.
+            Fullstack Software developer helping Startup&#8216; s build Software using Javascript.
           </Motto>
         </Title>
 

@@ -1,7 +1,31 @@
-import Document, {Html, Head, Main, NextScript} from 'next/document'
-import { ServerStyleSheet } from 'styled-components'
+import React from 'react';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { ServerStyleSheet } from 'styled-components';
 import Script from 'next/script'
-export default  class MyDocument extends Document {
+class MyDocument extends Document {
+    static async getInitialProps(ctx) {
+        const styledComponentsSheet = new ServerStyleSheet();
+        const originalRenderPage = ctx.renderPage;
+        try {
+            ctx.renderPage = () =>
+                originalRenderPage({
+                    enhanceApp: App => props =>
+                        styledComponentsSheet.collectStyles(<App {...props} />)
+                });
+            const initialProps = await Document.getInitialProps(ctx);
+            return {
+                ...initialProps,
+                styles: (
+                    <React.Fragment>
+                        {initialProps.styles}
+                        {styledComponentsSheet.getStyleElement()}
+                    </React.Fragment>
+                )
+            };
+        } finally {
+            styledComponentsSheet.seal();
+        }
+    }
 
     render() {
         const setInitialTheme = `
@@ -17,17 +41,25 @@ export default  class MyDocument extends Document {
 
 
         return (
-            <Html lang='en'>
+            <Html lang="en" dir="ltr">
                 <Head>
-
-
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link
+                        rel="preconnect"
+                        href="https://fonts.gstatic.com"
+                        crossOrigin="true"
+                    />
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap"
+                        rel="stylesheet"
+                    />
                     {/* Global Site Tag (gtag.js) - Google Analytics */}
                     <Script
                         async
                         strategy="afterInteractive"
                         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
                     />
-                    <script
+                    <Script id="google-analytics" 
                         dangerouslySetInnerHTML={{
                             __html: `
             window.dataLayer = window.dataLayer || [];
@@ -41,40 +73,17 @@ export default  class MyDocument extends Document {
               cookie_flags: 'SameSite=None;Secure'
             });
           `,
-                      
+
                         }}
                     />
                 </Head>
                 <body>
-                    <Script id="">0</Script>
-
                     <Main />
                     <NextScript />
                 </body>
             </Html>
-        )
+        );
     }
 }
-    MyDocument.getInitialProps = async (ctx) => {
-        const sheet = new ServerStyleSheet()
-        const originalRenderPage = ctx.renderPage
 
-        try{
-            ctx.renderPage = () => originalRenderPage({
-                enhancedApp:(App) => (props) => sheet.collectStyles(<App{...props}/>),
-            })
-    
-            const initialProps = await Document.getInitialProps(ctx);
-            return {
-                ...initialProps,
-                styles: (
-                    <>
-                        {initialProps.styles}
-                        {sheet.getStyleElement()}
-                    </>
-                ),
-            };
-        } finally {
-            sheet.seal();
-        }
-      }
+export default MyDocument;

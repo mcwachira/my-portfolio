@@ -157,7 +157,7 @@ export default function Home({posts}) {
 
 
   return (
-    <div className={styles.container}>
+    <div >
    
       <Head>
         <title>Mcwachira&#8216;s Blog and Portfolio site</title>

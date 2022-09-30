@@ -7,7 +7,7 @@ export const GA_TRACING_ID =process.env.NEXT_PUBLIC_GA_TRACKING_ID;
     })
  };
 
- export const event = ({action, category, label, value}) => {
+ export const Event = ({action, category, label, value}) => {
     window.gtag('event', action , {
         event_category:category,
         event_label:label,

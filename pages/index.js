@@ -64,6 +64,7 @@ color:#0070f3
 const Motto = styled.p`
 font-weight: 300;
 font-size:.9rem;
+width: 100%;
 color:var(--color-text-primary);
 
 @media ${device.mobileL}{
@@ -138,6 +139,8 @@ font-size:3rem;
 `
 const ContactContainer = styled.div`
 background: var(--color-bg-tertiary);
+width:100%;
+height:100vh;
 
 `
 

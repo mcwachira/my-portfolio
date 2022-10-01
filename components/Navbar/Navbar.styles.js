@@ -91,9 +91,12 @@ margin:auto;
 
 `
 export const NavbarLogo = styled.div`
-
+display: flex;
+    width:100%;
 font-size: 1.5rem;
 @media ${device.tablet}{
+align-items:center;
+justify-content: center;
 margin:auto;
 }
  color: var(--color-text-primary);
@@ -104,6 +107,7 @@ export const NavbarMenu = styled.div`
 display:none;
 
 @media ${device.tablet}{
+  width:100%;
     margin: auto;
   display: flex;
   flex-direction: row;

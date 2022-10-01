@@ -8,7 +8,6 @@ import { Blog } from 'styled-icons/icomoon'
 import { getAllPosts } from '@/lib/posts'
 import {device} from '@/utils/devices'
 import ContactMe from '@/components/ContactMe/ContactMe'
-
 //import dynamically
 
 const  ToggleButton  = dynamic(() =>import( '@/components/Button/ToggleButton'),{
@@ -65,6 +64,7 @@ color:#0070f3
 const Motto = styled.p`
 font-weight: 300;
 font-size:.9rem;
+width: 100%;
 color:var(--color-text-primary);
 
 @media ${device.mobileL}{
@@ -139,16 +139,28 @@ font-size:3rem;
 `
 const ContactContainer = styled.div`
 background: var(--color-bg-tertiary);
+width:100%;
+height:100vh;
 
 `
 
 //importing the post component dynamically o improve speed
-const Post = dynamic(() => import('@/components/Post/Post.component'), {ssr:false}); //maybe fix  
+const Post = dynamic(() => import('@/components/Post/Post.component'), {ssr:false});
+/* const ContactMe = dynamic(() => import('@/components/ContactMe/ContactMe'), {
+  ssr:false,
+
+    loading: () => (
+    <p className="loadingText subtitle-4">
+      Contact us Loading, please wait...
+    </p>
+  ),
+
+});  */
 export default function Home({posts}) {
 
 
   return (
-    <div className={styles.container}>
+    <div >
    
       <Head>
         <title>Mcwachira&#8216;s Blog and Portfolio site</title>

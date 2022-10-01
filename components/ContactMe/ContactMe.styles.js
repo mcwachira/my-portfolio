@@ -3,11 +3,11 @@ import { device } from '../../utils/devices'
 
 export const FormContainer = styled.div`
 
-
+width:100%;
 display: flex;
 flex-direction: column;
 gap:1rem;
-margin-bottom: rem;
+margin-bottom: 2rem;
 
 @media ${device.tablet}{
 flex-direction: row;

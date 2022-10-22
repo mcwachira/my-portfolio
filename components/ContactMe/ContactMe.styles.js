@@ -63,6 +63,7 @@ export const FormText = styled.h2`
 color:var( --color-text-tertiary);
 font-size:1.8rem;
 line-height: 2.1rem;
+width:100%;
 
 @media ${device.tablet}{
 font-size:2.5rem;

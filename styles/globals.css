@@ -25,6 +25,7 @@ body[data-theme="light"]{
  --color-bg-toggle: #1e90ff;
  --color-bg-card:#BFFFF0;
  --color-card-logo-color:#27281a;
+ --logo:url('/logo/svg/color.svg')
 }
 
 body[data-theme="dark"] {
@@ -37,6 +38,7 @@ body[data-theme="dark"] {
   --color-bg-toggle: #a9a9a9;
    --color-bg-card:#e3e3e3;
    --color-card-logo-color:#27281a;
+    --logo:url('/logo/png/white.png')
  
 
 
@@ -56,3 +58,13 @@ a {
 }
 
 
+.logo {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: var(--logo);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  height: 80px;
+  padding-left: 100px;
+}

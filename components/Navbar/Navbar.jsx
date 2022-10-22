@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { useTheme } from 'next-themes'
 import {
@@ -102,7 +103,7 @@ if(!mounted){
         <NavContainer>
           <NavbarLogo>
             <NavbarLink href='/'>
-              logo
+             <Image src="" width='50px' height='50px' className='logo'/>
             </NavbarLink>
           </NavbarLogo>
 

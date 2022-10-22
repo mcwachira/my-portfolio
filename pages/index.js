@@ -92,21 +92,21 @@ margin-top: 1rem;
 
 `
 const BlueBlog = styled(Blog)`
- color: var(--color-text-primary);
+ color: var(--color-social-logo);
 `
 
 const BlueTwitter = styled(Twitter)`
- color: var(--color-text-primary);
+ color: var(--color-social-logo);
 `
 const BlueLinkedIn = styled(LinkedinSquare)`
- color: var(--color-text-primary);
+ color: var(--color-social-logo);
 `
 const BlueGithub = styled(Github)`
- color: var(--color-text-primary);
+ color: var(--color-social-logo);
 `
 
 const BlueInstagram = styled(Instagram)`
- color: var(--color-text-primary);
+ color: var(--color-social-logo);
 `
 const BodyContainer = styled.div`
 width: 100%;
@@ -180,22 +180,22 @@ export default function Home({posts}) {
          
         <li>
             <a href="https://twitter.com/mc_wachira/" target="_blank" rel='noreferrer'>
-              <BlueTwitter size='30' />
+              <BlueTwitter size='40' />
        </a>
         </li>
           <li>
             <a href="https://www.linkedin.com/in/maina-wachira/" target="_blank" rel='noreferrer'>
-              <BlueLinkedIn size='30'/>
+              <BlueLinkedIn size='40'/>
             </a>
           </li>
           <li>
             <a href="https://github.com/mcwachira" target="_blank" rel='noreferrer'>
-              <BlueGithub size='30' />
+              <BlueGithub size='40' />
             </a>
           </li>
           <li>
             <a href="" target="_blank" rel='noreferrer'>
-              <BlueInstagram size='30' />
+              <BlueInstagram size='40' />
             </a>
           </li>
         </SocialLinks>

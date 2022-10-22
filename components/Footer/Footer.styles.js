@@ -12,12 +12,14 @@ border-top:1px solid  #999;
 padding-top: 2rem;
 display:flex;
 flex-direction: column;
+margin-top: 20rem;
 
 
 
 @media ${device.tablet}{
 flex-direction: row;
 justify-content: space-between;
+margin-top: 5rem;
 
 }
 

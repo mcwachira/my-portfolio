@@ -25,6 +25,7 @@ body[data-theme="light"]{
  --color-bg-toggle: #1e90ff;
  --color-bg-card:#BFFFF0;
  --color-card-logo-color:#27281a;
+ --color-social-logo:#111;
  --logo:url('/logo/svg/color.svg')
 }
 
@@ -38,6 +39,7 @@ body[data-theme="dark"] {
   --color-bg-toggle: #a9a9a9;
    --color-bg-card:#e3e3e3;
    --color-card-logo-color:#27281a;
+   --color-social--logo:#fff;
     --logo:url('/logo/png/white.png')
  
 

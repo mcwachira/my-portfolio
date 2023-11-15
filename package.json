@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines" : { 
+    "npm" : ">=8.0.0 <11.0.0",
+    "node" : ">=16.0.0 <20.9.0"
+  },
   "dependencies": {
     "@next/bundle-analyzer": "^12.2.5",
     "esbuild": "^0.14.54",

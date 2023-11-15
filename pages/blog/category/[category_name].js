@@ -141,7 +141,7 @@ export const getStaticProps = async({params:{category_name}}) => {
     const categoryPosts = posts.filter((post) => post.frontmatter.category.toLowerCase() === category_name)
  
 
-    console.log(uniqueCategories)
+    // console.log(uniqueCategories)
      /* (categories) */
     return {
         props: {

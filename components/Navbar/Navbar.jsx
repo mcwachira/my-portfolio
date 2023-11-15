@@ -103,7 +103,7 @@ if(!mounted){
         <NavContainer>
           <NavbarLogo>
             <NavbarLink href='/'>
-             <Image src="" width='50px' height='50px' className='logo'/>
+             <Image src="" width='50px' height='50px' alt='logo' className='logo'/>
             </NavbarLink>
           </NavbarLogo>
 

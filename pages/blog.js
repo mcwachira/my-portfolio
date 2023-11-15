@@ -122,17 +122,20 @@ export const getStaticProps = async () => {
 
     const posts =  getAllPosts()
 
+  
+/* console.log(posts) */
+
     const categories = posts.map((post) => post.frontmatter.category)
 
 
     //gives us a an array with non repeating values
     const uniqueCategories = [...new Set(categories)]
-
+    /* console.log(uniqueCategories) */
 
     return {
-        props:{
+        props: {
             posts,
-            categories:uniqueCategories
+            categories: uniqueCategories
         }
     }
 }

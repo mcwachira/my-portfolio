@@ -8,11 +8,19 @@ import { getSinglePost, getAllPosts} from '../../lib/posts'
 import { getMDXComponent } from "mdx-bundler/client";
 import {device} from '@/utils/devices'
 import SyntaxHighlighter from '@/utils/SyntaxHighlighter'
+<<<<<<< HEAD:pages/blog/[slug].js
+import MdxImage from '@/utils/MdxImage';
+import Image from 'next/image'
+import Mern from '../../assets/posts/mern.png'
+import Layout from '@/components/Layout';
+=======
 import { ArrowLeft } from 'styled-icons/bootstrap'
 
+>>>>>>> main:pagessss/snippet/[slug].js
 
 const BackButton = styled(Link)`
-background-color: #0070f3;
+/* background-color: #0070f3; */
+font-size:1.2rem;
 /* padding:.5rem 1rem ; */
 color:#0AC2C2;
 `
@@ -56,11 +64,17 @@ margin: 3rem auto;
 `
 const PostTextContainer = styled.div`
 
-
+;
 `
-
+const PostTextHeader = styled.div`
+margin-top:1rem;
+display: flex;
+justify-content:space-around
+`
 const PostPage = ({frontmatter, code, slug}) => {
 
+ 
+ 
   (frontmatter.language)
 
   
@@ -82,13 +96,16 @@ const PostPage = ({frontmatter, code, slug}) => {
           {frontmatter?.title} 
           
               </PostTitle>
-              {/* <Image src={frontmatter.cover_image} alt={frontmatter.title} width={200} height={300}/> */}
-        <BackButton href='/blog'> Go Back</BackButton>
+        <Image src={frontmatter.cover_image} alt={frontmatter.title} width={1000} height={400}/>
+     
               <PostTextContainer>
-
-              {frontmatter.readingTime.text}
-              {/* {frontmatter.wordCount}
-              {frontmatter.slug} */}
+          <PostTextHeader>
+            <BackButton href='/blog'> Go Back</BackButton>
+            {frontmatter.readingTime.text}
+             {/*{frontmatter.wordCount} */}
+            {/* {frontmatter.slug}  */}
+          </PostTextHeader>
+      
 
           <Component  language={frontmatter.language} components={{
             pre:SyntaxHighlighter
@@ -107,15 +124,24 @@ export default PostPage
 
 
 export const getStaticProps = async ({ params }) => {
+  //console.log(params)
   const post = await getSinglePost(params.slug)
   // (post)
+  /* console.log(post) */
   return {
     props: { ...post },
   };
 };
 
+<<<<<<< HEAD:pages/blog/[slug].js
+export const getStaticPaths = async() => {
+  const paths =  getAllPosts().map(({ slug }) => ({ params: { slug } }));
+  console.log(paths)
+
+=======
 export const getStaticPaths = async () => {
   const paths = getAllPosts().map(({ slug }) => ({ params: { slug } }));
+>>>>>>> main:pagessss/snippet/[slug].js
   return {
     paths,
     fallback: false,

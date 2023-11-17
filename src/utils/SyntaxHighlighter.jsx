@@ -1,6 +1,13 @@
+<<<<<<< HEAD:utils/SyntaxHighlighter.jsx
+import react ,{useState, useEffect} from 'react'
+import Highlight, {defaultProps} from 'prism-react-renderer'
+import themeLight from 'prism-react-renderer/themes/nightOwlLight'
+ import themeDark from 'prism-react-renderer/themes/duotoneDark'
+=======
 import React from 'react'
 //import Highlight, {defaultProps} from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/nightOwlLight'
+>>>>>>> main:src/utils/SyntaxHighlighter.jsx
 import styled from 'styled-components'
 
 
@@ -48,14 +55,37 @@ margin-right: -32px;
 `
 
 const SyntaxHighlighter = ({children}) => {
+<<<<<<< HEAD:utils/SyntaxHighlighter.jsx
+
+
+// (children)
+=======
 // console.log(children)
+>>>>>>> main:src/utils/SyntaxHighlighter.jsx
     //access the code in our mdx files 
     const code = children.props.children;
     const language = children.props.className?.replace("language-", "").trim();
+
+
+    //chang theme of syntax highlighter based on the  dark or light mode
+    const [theme, setTheme] = useState("themeLight")
+
+
+    useEffect(() => {
+        const savedTheme = window.localStorage.getItem("theme");
+       if (savedTheme === 'dark'){
+
+           setTheme('themeLight')
+       } else {
+        setTheme('themeDark')
+       }
+      
+    }, []);
+
     return(
         <Highlight {...defaultProps} 
         code={code} 
-        theme={theme}
+        theme={themeDark}
         language={language}
         >
 

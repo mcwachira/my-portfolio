@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines" : { 
+    "npm" : ">=8.0.0 <11.0.0",
+    "node" : ">=16.0.0 <20.9.0"
+  },
   "dependencies": {
     "@code-hike/mdx": "^0.8.3",
     "@next/bundle-analyzer": "^13.3.4",

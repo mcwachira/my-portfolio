@@ -1,0 +1,95 @@
+---
+title: 'The Beginners guide to Building a Mern Stack Ecommerce Application.'
+date: 'November 10, 2022'
+excerpt: 'In a series of articles, I am going to show how to build an ecommerce application using react, node js, express, and MongoDB'
+cover_image: '/images/posts/mern.png'
+category: 'Nodejs'
+author: 'mcwachira'
+type: 'article'
+---
+
+
+
+# In a series of articles, I am going to show how to build an ecommerce application using react, node js, express, and MongoDB. By the end of the  series we are going to have learned how to :
+1. Built a rest API using node express and MongoDB.
+2. Built a mobile app using react native.
+3. Built a web application using react js.
+4.  Carry out testing using cypress.
+
+Here is the git repository if you want to follow along with the series [Github](https://github.com/mcwachira/nodejs-Ecommerce-rest-api)
+
+In the first part of this series, we will focus on building the rest API.
+
+## Building The Ecommerce Rest API.
+To build our e-commerce API we first have to understand the definition of an API and the definition of rest.
+
+### What is an API?
+The word API  stands for application programmable interface and it is a set of rules that define how applications can connect to and communicate with each other.
+Apis are designed using different architectural styles and one of the most popular is rest.
+
+
+### What is a Rest API
+The word REST stands for Representational State Transfer. This means that when a resource is requested by the client using a REST API the requested resource is transferred back with all its relevant information and in a format easily understood by the client.
+
+![](./Rest-API.png)
+
+Rest APIs communicate via HTTP  requests to perform basic database function like creating, reading, updating, and deleting records (crud). These functions are performed by the following existing   HTTP methods
+
+- POST      used to create the resource  
+- GET        used to fetch the resource 
+- PUT        used to update the resource 
+- DELETE  used to remove the resource 
+
+
+![rest-api.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1668083449777/jgxXinqr0.png align="left")
+
+To build the API we are going to use the following 
+
+1. nodejs
+2. express Library
+3. MongoDB as the database
+4. Postman to test our API's 
+
+In order to build the api we have to have node installed on your pc by gouing to their website and installing the lastest version.[nodejs website](https://nodejs.org/en/).
+After installing node we  create an empty folder on our pc and initialized it using 
+
+```
+npm init -y 
+``` 
+This will enable us to  create and initialize a node project and provide us with a package.json file which will contain infomation about our project like the name of the project,the description,  the list of dependancies and the scripts that will run the application  e.t.c
+  After intializing our project we will need to install some dependancies which will be used in making the api but before ding that  we need to know the difference between dependancies and dev dependancies.
+Dependancies are modules  which are reqired during development and runtime while devDependencies are required during development only.
+
+We  will start by installing express as a dependancy . Epxress js is a nodejs framwork desinged to build web applications easy ad quickly
+```
+npm install --save express
+``` 
+We then install nodemon a cli tool used to restart nodejs application whenever it detects changes  as a dev dependancies .
+```
+npm install -D nodemon
+``` 
+after install the two packages we write a starts script in our package.json file to run our node app 
+```{
+  "name": "nodejs-ecommerce-rest-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+   "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+
+    "express": "^4.18.2",
+   
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
+
+```
+We then creat 
+

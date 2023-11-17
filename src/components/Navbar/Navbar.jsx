@@ -102,7 +102,11 @@ if(!mounted){
         <NavContainer>
           <NavbarLogo>
             <NavbarLink href='/'>
+<<<<<<< HEAD:components/Navbar/Navbar.jsx
+             <Image src="" width='50px' height='50px' alt='logo' className='logo'/>
+=======
             <img src="" width='50px' height='50px' className='logo' />
+>>>>>>> main:src/components/Navbar/Navbar.jsx
             </NavbarLink>
           </NavbarLogo>
 
